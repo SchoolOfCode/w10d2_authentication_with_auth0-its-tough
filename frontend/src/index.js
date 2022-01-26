@@ -5,10 +5,15 @@ import App from "./Components/App.js";
 import reportWebVitals from "./reportWebVitals";
 import { Auth0Provider } from "@auth0/auth0-react";
 
+const domain= process.env.DOMAIN;
+const clientId= process.env.CLIENTID;
+
+
+
 ReactDOM.render(
   <Auth0Provider
-    domain="dev-b86zafq5.eu.auth0.com"
-    clientId="1WtMS6ShCIAz1yzJeAG5p5AYsU3oE7Qv"
+    domain = {domain}
+    clientId = {clientId}
     redirectUri={window.location.origin}
   >
     <App />
